@@ -115,9 +115,10 @@
         oklch(0.78 0.22 280)
     );
     --gradient-background: linear-gradient(
-        135deg,
-        oklch(0.08 0 0),
-        oklch(0.12 0.01 240)
+        120deg,
+        var(--color-primary),
+        oklch(0.2 0.05 240),
+        var(--color-accent)
     );
     --gradient-card: linear-gradient(
         135deg,
@@ -135,7 +136,6 @@
 html,
 body {
     font-family: var(--font-mono);
-    background: var(--gradient-background);
 }
 
 /* Enhanced navbar styling */
@@ -148,9 +148,9 @@ body {
 .navbar-gradient {
     background: linear-gradient(
         45deg,
-        var(--color-primary, oklch(0.65 0.28 200)),
         oklch(0.2 0.05 240),
-        var(--color-accent, oklch(0.78 0.22 280))
+        var(--color-primary, oklch(0.65 0.28 200)),
+        oklch(0.2 0.05 240)
     ) !important;
 }
 

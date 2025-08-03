@@ -1,7 +1,7 @@
 {
     "name": "promptgenerator",
     "version": "2.0.0",
-    "description": "drag and drop prompt generator",
+    "description": "drag and drop prompt generator for bash and zsh",
     "type": "module",
     "keywords": [],
     "homepage": "https://promptgenerator.com",
