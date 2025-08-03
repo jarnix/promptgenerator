@@ -1,0 +1,65 @@
+:root {
+  --background: oklch(0.0800 0 0);
+  --foreground: oklch(0.9500 0.0200 180);
+  --card: oklch(0.1200 0.0100 240);
+  --card-foreground: oklch(0.9200 0.0150 180);
+  --popover: oklch(0.1000 0.0100 240);
+  --popover-foreground: oklch(0.9200 0.0150 180);
+  --primary: oklch(0.6500 0.2800 200);
+  --primary-foreground: oklch(0.0800 0 0);
+  --secondary: oklch(0.7200 0.2500 140);
+  --secondary-foreground: oklch(0.0800 0 0);
+  --muted: oklch(0.1800 0.0200 240);
+  --muted-foreground: oklch(0.6500 0.0300 180);
+  --accent: oklch(0.7800 0.2200 280);
+  --accent-foreground: oklch(0.0800 0 0);
+  --destructive: oklch(0.6200 0.2800 20);
+  --destructive-foreground: oklch(0.9500 0.0200 180);
+  --border: oklch(0.2200 0.0300 240);
+  --input: oklch(0.1500 0.0200 240);
+  --ring: oklch(0.6500 0.2800 200);
+  --chart-1: oklch(0.6500 0.2800 200);
+  --chart-2: oklch(0.7200 0.2500 140);
+  --chart-3: oklch(0.7800 0.2200 280);
+  --chart-4: oklch(0.6800 0.2600 320);
+  --chart-5: oklch(0.7500 0.2400 60);
+  --sidebar: oklch(0.1000 0.0100 240);
+  --sidebar-foreground: oklch(0.9200 0.0150 180);
+  --sidebar-primary: oklch(0.6500 0.2800 200);
+  --sidebar-primary-foreground: oklch(0.0800 0 0);
+  --sidebar-accent: oklch(0.7200 0.2500 140);
+  --sidebar-accent-foreground: oklch(0.0800 0 0);
+  --sidebar-border: oklch(0.2200 0.0300 240);
+  --sidebar-ring: oklch(0.6500 0.2800 200);
+  --font-sans: JetBrains Mono, Fira Code, monospace;
+  --font-serif: JetBrains Mono, Fira Code, monospace;
+  --font-mono: JetBrains Mono, Fira Code, monospace;
+  --radius: 0.5rem;
+  --shadow-2xs: 0px 1px 3px 0px hsl(200 100% 50% / 0.15);
+  --shadow-xs: 0px 1px 3px 0px hsl(200 100% 50% / 0.20);
+  --shadow-sm: 0px 2px 6px 0px hsl(200 100% 50% / 0.25), 0px 1px 2px -1px hsl(140 100% 50% / 0.15);
+  --shadow: 0px 4px 8px 0px hsl(200 100% 50% / 0.30), 0px 2px 4px -1px hsl(140 100% 50% / 0.20);
+  --shadow-md: 0px 6px 12px 0px hsl(200 100% 50% / 0.35), 0px 4px 6px -1px hsl(280 100% 60% / 0.25);
+  --shadow-lg: 0px 8px 16px 0px hsl(200 100% 50% / 0.40), 0px 6px 8px -1px hsl(280 100% 60% / 0.30);
+  --shadow-xl: 0px 12px 24px 0px hsl(200 100% 50% / 0.45), 0px 8px 12px -1px hsl(280 100% 60% / 0.35);
+  --shadow-2xl: 0px 16px 32px 0px hsl(200 100% 50% / 0.50);
+  --tracking-normal: 0.025em;
+  --spacing: 0.5rem;
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+
+  /* Custom gradient variables for cyberpunk theme */
+  --gradient-primary: linear-gradient(135deg, oklch(0.6500 0.2800 200), oklch(0.7200 0.2500 140));
+  --gradient-secondary: linear-gradient(135deg, oklch(0.7800 0.2200 280), oklch(0.6800 0.2600 320));
+  --gradient-accent: linear-gradient(135deg, oklch(0.7200 0.2500 140), oklch(0.7800 0.2200 280));
+  --gradient-background: linear-gradient(135deg, oklch(0.0800 0 0), oklch(0.1200 0.0100 240));
+  --gradient-card: linear-gradient(135deg, oklch(0.1200 0.0100 240), oklch(0.1500 0.0200 240));
+  
+  /* Glow effects for cyberpunk aesthetic */
+  --glow-primary: 0 0 20px hsl(200 100% 50% / 0.3);
+  --glow-secondary: 0 0 20px hsl(140 100% 50% / 0.3);
+  --glow-accent: 0 0 20px hsl(280 100% 60% / 0.3);
+}
