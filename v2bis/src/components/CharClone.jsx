@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import Char from './Char.jsx';
-import { Icon } from 'semantic-ui-react';
+import { ViewfinderCircleIcon } from '@heroicons/react/24/solid';
 import './Char.css';
 
 
@@ -28,9 +28,9 @@ class CharClone extends Component {
 
     render() {
         return (
-            <div className="charClone">
-                <Icon color='red' name='crosshairs' />
-                <div>{this.props.children}</div>
+            <div className="badge badge-error badge-lg gap-2 p-3 opacity-70">
+                <ViewfinderCircleIcon className="w-4 h-4 text-red-500 flex-shrink-0" />
+                <span className="text-sm font-medium">{this.props.children}</span>
             </div>
         );
     }
