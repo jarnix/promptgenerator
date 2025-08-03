@@ -9,6 +9,14 @@ import {
 } from '@heroicons/react/24/outline';
 import Char from './Char.jsx';
 import CharClone from './CharClone.jsx';
+import {
+    generalBlocks,
+    gitBlocks,
+    ponctuationCharacters,
+    boxDrawingCharacters,
+    blockElements,
+    emoji
+} from './elements.jsx';
 
 
 // Utility functions for drag and drop
@@ -33,47 +41,20 @@ const remove = (droppableElements, indexToRemove) => {
     return droppableElementsClone;
 };
 
-// Data for blocks
+// Import and organize block categories from elements.jsx
 const BLOCK_CATEGORIES = {
-    system: [
-        { id: uuid(), emoji: '👤', desc: 'username', code: '\\u' },
-        { id: uuid(), emoji: '🖥️', desc: 'hostname', code: '\\h' },
-        { id: uuid(), emoji: '📁', desc: 'pwd', code: '\\w' },
-        { id: uuid(), emoji: '🏠', desc: 'home dir', code: '~' },
-        { id: uuid(), emoji: '⚡', desc: 'exit status', code: '\\$?' },
-        { id: uuid(), emoji: '🔧', desc: 'shell', code: '\\s' },
-    ],
-    git: [
-        { id: uuid(), emoji: '🌿', desc: 'branch', code: '$(git branch --show-current 2>/dev/null)' },
-        { id: uuid(), emoji: '📝', desc: 'status', code: '$(git status --porcelain 2>/dev/null | wc -l)' },
-        { id: uuid(), emoji: '🏷️', desc: 'tag', code: '$(git describe --tags 2>/dev/null)' },
-    ],
-    time: [
-        { id: uuid(), emoji: '🕐', desc: 'time HH:MM', code: '\\A' },
-        { id: uuid(), emoji: '⏰', desc: 'time HH:MM:SS', code: '\\t' },
-        { id: uuid(), emoji: '📅', desc: 'date', code: '\\d' },
-    ],
-    symbols: [
-        { id: uuid(), emoji: '🚀', desc: 'rocket', code: '🚀' },
-        { id: uuid(), emoji: '⭐', desc: 'star', code: '⭐' },
-        { id: uuid(), emoji: '🔥', desc: 'fire', code: '🔥' },
-        { id: uuid(), emoji: '💎', desc: 'diamond', code: '💎' },
-        { id: uuid(), emoji: '⚡', desc: 'zap', code: '⚡' },
-        { id: uuid(), emoji: '🎯', desc: 'target', code: '🎯' },
-    ],
-    chars: [
-        { id: uuid(), emoji: '>', desc: 'greater than', code: '>' },
-        { id: uuid(), emoji: '$', desc: 'dollar', code: '$' },
-        { id: uuid(), emoji: '@', desc: 'at symbol', code: '@' },
-        { id: uuid(), emoji: ':', desc: 'colon', code: ':' },
-        { id: uuid(), emoji: '|', desc: 'pipe', code: '|' },
-        { id: uuid(), emoji: '~', desc: 'tilde', code: '~' },
-    ]
+    general: generalBlocks,
+    punctuation: ponctuationCharacters,
+    git: gitBlocks,
+    boxDrawing: boxDrawingCharacters,
+    blockElements: blockElements,
+    emoji: emoji,
+
 };
 
 class App extends Component {
     state = {
-        activeCategory: 'system',
+        activeCategory: 'general',
         activeTool: 'prompt', // 'prompt' or 'window'
         workspace: [],
         searchTerm: '',
@@ -110,7 +91,10 @@ class App extends Component {
         if (this.state.workspace.length === 0) return 'Drop blocks to see preview...';
 
         return this.state.workspace.map(block => {
-            if (block.emoji && block.emoji !== block.desc) {
+            // Handle both formats: elements.jsx format and the simple format
+            if (block.html) {
+                return block.html;
+            } else if (block.emoji && block.emoji !== block.desc) {
                 return `${block.desc} ${block.emoji}`;
             }
             return block.desc;
@@ -217,11 +201,11 @@ class App extends Component {
                                                                 provided={provided}
                                                                 isDragging={snapshot.isDragging}
                                                             >
-                                                                {block.emoji} {block.desc}
+                                                                {block.desc}
                                                             </Char>
                                                             {snapshot.isDragging && (
                                                                 <CharClone>
-                                                                    {block.emoji} {block.desc}
+                                                                    {block.desc}
                                                                 </CharClone>
                                                             )}
                                                         </div>
@@ -261,7 +245,7 @@ class App extends Component {
                                                             {(provided) => (
                                                                 <div className="flex items-center gap-1">
                                                                     <Char provided={provided}>
-                                                                        {block.emoji} {block.desc}
+                                                                        {block.desc}
                                                                     </Char>
                                                                     <button className="btn btn-xs btn-ghost">
                                                                         <PencilIcon className="w-3 h-3" />

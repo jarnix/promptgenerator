@@ -1,1 +1,92 @@
 @import "tailwindcss";
+
+:root {
+    --background: oklch(0.08 0 0);
+    --foreground: oklch(0.95 0.02 180);
+    --card: oklch(0.12 0.01 240);
+    --card-foreground: oklch(0.92 0.015 180);
+    --popover: oklch(0.1 0.01 240);
+    --popover-foreground: oklch(0.92 0.015 180);
+    --primary: oklch(0.65 0.28 200);
+    --primary-foreground: oklch(0.08 0 0);
+    --secondary: oklch(0.72 0.25 140);
+    --secondary-foreground: oklch(0.08 0 0);
+    --muted: oklch(0.18 0.02 240);
+    --muted-foreground: oklch(0.65 0.03 180);
+    --accent: oklch(0.78 0.22 280);
+    --accent-foreground: oklch(0.08 0 0);
+    --destructive: oklch(0.62 0.28 20);
+    --destructive-foreground: oklch(0.95 0.02 180);
+    --border: oklch(0.22 0.03 240);
+    --input: oklch(0.15 0.02 240);
+    --ring: oklch(0.65 0.28 200);
+    --chart-1: oklch(0.65 0.28 200);
+    --chart-2: oklch(0.72 0.25 140);
+    --chart-3: oklch(0.78 0.22 280);
+    --chart-4: oklch(0.68 0.26 320);
+    --chart-5: oklch(0.75 0.24 60);
+    --sidebar: oklch(0.1 0.01 240);
+    --sidebar-foreground: oklch(0.92 0.015 180);
+    --sidebar-primary: oklch(0.65 0.28 200);
+    --sidebar-primary-foreground: oklch(0.08 0 0);
+    --sidebar-accent: oklch(0.72 0.25 140);
+    --sidebar-accent-foreground: oklch(0.08 0 0);
+    --sidebar-border: oklch(0.22 0.03 240);
+    --sidebar-ring: oklch(0.65 0.28 200);
+    --font-sans: JetBrains Mono, Fira Code, monospace;
+    --font-serif: JetBrains Mono, Fira Code, monospace;
+    --font-mono: JetBrains Mono, Fira Code, monospace;
+    --radius: 0.5rem;
+    --shadow-2xs: 0px 1px 3px 0px hsl(200 100% 50% / 0.15);
+    --shadow-xs: 0px 1px 3px 0px hsl(200 100% 50% / 0.2);
+    --shadow-sm: 0px 2px 6px 0px hsl(200 100% 50% / 0.25),
+        0px 1px 2px -1px hsl(140 100% 50% / 0.15);
+    --shadow: 0px 4px 8px 0px hsl(200 100% 50% / 0.3),
+        0px 2px 4px -1px hsl(140 100% 50% / 0.2);
+    --shadow-md: 0px 6px 12px 0px hsl(200 100% 50% / 0.35),
+        0px 4px 6px -1px hsl(280 100% 60% / 0.25);
+    --shadow-lg: 0px 8px 16px 0px hsl(200 100% 50% / 0.4),
+        0px 6px 8px -1px hsl(280 100% 60% / 0.3);
+    --shadow-xl: 0px 12px 24px 0px hsl(200 100% 50% / 0.45),
+        0px 8px 12px -1px hsl(280 100% 60% / 0.35);
+    --shadow-2xl: 0px 16px 32px 0px hsl(200 100% 50% / 0.5);
+    --tracking-normal: 0.025em;
+    --spacing: 0.5rem;
+
+    --radius-sm: calc(var(--radius) - 2px);
+    --radius-md: var(--radius);
+    --radius-lg: calc(var(--radius) + 4px);
+    --radius-xl: calc(var(--radius) + 8px);
+
+    /* Custom gradient variables for cyberpunk theme */
+    --gradient-primary: linear-gradient(
+        135deg,
+        oklch(0.65 0.28 200),
+        oklch(0.72 0.25 140)
+    );
+    --gradient-secondary: linear-gradient(
+        135deg,
+        oklch(0.78 0.22 280),
+        oklch(0.68 0.26 320)
+    );
+    --gradient-accent: linear-gradient(
+        135deg,
+        oklch(0.72 0.25 140),
+        oklch(0.78 0.22 280)
+    );
+    --gradient-background: linear-gradient(
+        135deg,
+        oklch(0.08 0 0),
+        oklch(0.12 0.01 240)
+    );
+    --gradient-card: linear-gradient(
+        135deg,
+        oklch(0.12 0.01 240),
+        oklch(0.15 0.02 240)
+    );
+
+    /* Glow effects for cyberpunk aesthetic */
+    --glow-primary: 0 0 20px hsl(200 100% 50% / 0.3);
+    --glow-secondary: 0 0 20px hsl(140 100% 50% / 0.3);
+    --glow-accent: 0 0 20px hsl(280 100% 60% / 0.3);
+}
