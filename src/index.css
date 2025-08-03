@@ -1,4 +1,44 @@
 @import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+    name: "cyberpunk";
+    default: true;
+    prefersdark: true;
+    color-scheme: dark;
+
+    --color-base-100: oklch(0.08 0 0);
+    --color-base-200: oklch(0.12 0.01 240);
+    --color-base-300: oklch(0.15 0.02 240);
+    --color-base-content: oklch(0.95 0.02 180);
+    --color-primary: oklch(0.65 0.28 200);
+    --color-primary-content: oklch(0.08 0 0);
+    --color-secondary: oklch(0.72 0.25 140);
+    --color-secondary-content: oklch(0.08 0 0);
+    --color-accent: oklch(0.78 0.22 280);
+    --color-accent-content: oklch(0.08 0 0);
+    --color-neutral: oklch(0.18 0.02 240);
+    --color-neutral-content: oklch(0.92 0.015 180);
+    --color-info: oklch(0.65 0.28 200);
+    --color-info-content: oklch(0.08 0 0);
+    --color-success: oklch(0.72 0.25 140);
+    --color-success-content: oklch(0.08 0 0);
+    --color-warning: oklch(0.75 0.24 60);
+    --color-warning-content: oklch(0.08 0 0);
+    --color-error: oklch(0.62 0.28 20);
+    --color-error-content: oklch(0.95 0.02 180);
+
+    --radius-selector: 1rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+
+    --border: 1px;
+
+    --depth: 1;
+    --noise: 0;
+}
 
 :root {
     --background: oklch(0.08 0 0);
@@ -91,42 +131,59 @@
     --glow-accent: 0 0 20px hsl(280 100% 60% / 0.3);
 }
 
-/* Custom cyberpunk variables preserved for future use */
-/*
-[data-theme="dark"],
-:root {
-    --p: 0.65 0.28 200;
-    --pf: 0.08 0 0;
-    --pc: 0.08 0 0;
-    --s: 0.72 0.25 140;
-    --sf: 0.08 0 0;
-    --sc: 0.08 0 0;
-    --a: 0.78 0.22 280;
-    --af: 0.08 0 0;
-    --ac: 0.08 0 0;
-    --n: 0.18 0.02 240;
-    --nf: 0.92 0.015 180;
-    --nc: 0.92 0.015 180;
-    --b1: 0.08 0 0;
-    --b2: 0.12 0.01 240;
-    --b3: 0.15 0.02 240;
-    --bc: 0.95 0.02 180;
-    --in: 0.65 0.28 200;
-    --inc: 0.08 0 0;
-    --su: 0.72 0.25 140;
-    --suc: 0.08 0 0;
-    --wa: 0.75 0.24 60;
-    --wac: 0.08 0 0;
-    --er: 0.62 0.28 20;
-    --erc: 0.95 0.02 180;
-}
-*/
-
 /* Apply monospace font globally */
 html,
 body {
     font-family: var(--font-mono);
+    background: var(--gradient-background);
 }
+
+/* Enhanced navbar styling */
+.navbar {
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+    margin-bottom: 1rem;
+}
+
+.navbar-gradient {
+    background: linear-gradient(
+        45deg,
+        var(--color-primary, oklch(0.65 0.28 200)),
+        oklch(0.2 0.05 240),
+        var(--color-accent, oklch(0.78 0.22 280))
+    ) !important;
+}
+
+.navbar h1 {
+    text-shadow: 0 0 10px var(--glow-primary);
+}
+
+/* Enhanced card styling */
+.card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-gradient {
+    border: 2px solid transparent;
+    background: linear-gradient(
+                var(--color-base-100, oklch(0.08 0 0)),
+                var(--color-base-100, oklch(0.08 0 0))
+            )
+            padding-box,
+        linear-gradient(
+                45deg,
+                var(--color-primary, oklch(0.65 0.28 200)),
+                oklch(0.2 0.05 240),
+                var(--color-accent, oklch(0.78 0.22 280))
+            )
+            border-box;
+}
+
+/* Removed the top accent line as it was creating visual interference */
+
+/* Removed hover animation as requested */
 
 /* Custom classes using our variables */
 .bg-cyberpunk {
