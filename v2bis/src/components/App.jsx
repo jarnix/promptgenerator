@@ -7,8 +7,6 @@ import {
     ClipboardDocumentIcon,
     PencilIcon
 } from '@heroicons/react/24/outline';
-import Char from './Char.jsx';
-import CharClone from './CharClone.jsx';
 import {
     generalBlocks,
     gitBlocks,
@@ -18,6 +16,8 @@ import {
     emoji
 } from './elements.jsx';
 
+import Char from './Char.jsx';
+import CharClone from './CharClone.jsx';
 
 // Utility functions for drag and drop
 const reorder = (list, startIndex, endIndex) => {
@@ -117,7 +117,7 @@ class App extends Component {
         const currentBlocks = BLOCK_CATEGORIES[this.state.activeCategory] || [];
 
         return (
-            <div className="min-h-screen bg-base-200">
+            <div className="min-h-screen bg-base-200" data-theme="night">
                 {/* Header */}
                 <div className="navbar bg-base-100 shadow-lg">
                     <div className="navbar-start">

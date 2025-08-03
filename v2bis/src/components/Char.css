@@ -1,7 +1,0 @@
-/* Minimal CSS - let DaisyUI handle the styling */
-.char,
-.charClone {
-    user-select: none;
-}
-
-/* Clean up - remove interfering styles */

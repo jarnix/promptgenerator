@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { ViewfinderCircleIcon } from '@heroicons/react/24/solid';
-import './Char.css';
-
 
 class Char extends Component {
     render() {
@@ -11,13 +9,12 @@ class Char extends Component {
                 ref={this.props.provided.innerRef}
                 style={this.props.provided.draggableProps.style}
                 {...this.props.provided.draggableProps}
-            /*onClick={() => this.props.setCurrentCharIndex(this.props.charIndex)}*/
             >
                 <div
                     {...this.props.provided.dragHandleProps}
                     className="cursor-grab active:cursor-grabbing"
                 >
-                    <ViewfinderCircleIcon className="w-4 h-4 text-orange-500 flex-shrink-0" />
+                    <ViewfinderCircleIcon className="w-4 h-4 text-primary flex-shrink-0" />
                 </div>
                 <span className="text-sm font-medium">
                     {this.props.children}
