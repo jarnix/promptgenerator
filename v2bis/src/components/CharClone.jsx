@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import Char from './Char.js';
+import Char from './Char.jsx';
 import { Icon } from 'semantic-ui-react';
 import './Char.css';
 

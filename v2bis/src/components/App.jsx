@@ -4,9 +4,9 @@ import { v4 as uuid } from 'uuid';
 import styled from 'styled-components';
 import { Container, Button, Icon, Menu, Header, Segment, Grid, GridRow, GridColumn } from 'semantic-ui-react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import Char from './Char';
+import Char from './Char.jsx';
 import './App.css';
-import CharClone from './CharClone';
+import CharClone from './CharClone.jsx';
 // import console = require('console');
 
 // a little function to help us with reordering the result
